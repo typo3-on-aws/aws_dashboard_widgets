@@ -1,0 +1,26 @@
+{
+	"name": "typo3-on-aws/aws-dashboard-widgets",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3-on-AWS widgets for the TYPO3 v10 backend dashboard",
+	"homepage": "https://t3rrific.com/typo3-on-aws/",
+	"authors": [
+		{
+			"name": "Michael Schams",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.2.0",
+		"typo3/cms-core": "^10.3",
+		"typo3/cms-dashboard": "^10.3"
+	},
+	"replace": {
+		"aws_dashboard_widgets": "self.version",
+		"typo3-ter/aws-dashboard-widgets": "self.version"
+	},
+	"autoload": {
+		"psr-4": {
+			"Typo3OnAws\\AwsDashboardWidgets\\": "Classes/"
+		}
+	}
+}
