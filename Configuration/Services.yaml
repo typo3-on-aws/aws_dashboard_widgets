@@ -1,0 +1,36 @@
+services:
+
+  Typo3OnAws\AwsDashboardWidgets\:
+    resource: '../Classes/*'
+
+  AwsGeneralInformation:
+    class: Typo3OnAws\AwsDashboardWidgets\Widgets\GeneralInformationWidget
+    arguments: ['AwsGeneralInformation']
+    tags:
+      - name: dashboard.widget
+        identifier: AwsGeneralInformation
+        widgetGroups: 'typo3_on_aws'
+
+  AwsCommercialSupport:
+    class: Typo3OnAws\AwsDashboardWidgets\Widgets\LinkToCommercialSupportWidget
+    arguments: ['AwsCommercialSupport']
+    tags:
+      - name: dashboard.widget
+        identifier: AwsCommercialSupport
+        widgetGroups: 'typo3_on_aws'
+
+  AwsDocumentation:
+    class: Typo3OnAws\AwsDashboardWidgets\Widgets\LinkToDocumentationWidget
+    arguments: ['AwsDocumentation']
+    tags:
+      - name: dashboard.widget
+        identifier: AwsDocumentation
+        widgetGroups: 'typo3_on_aws'
+
+  AwsExtensions:
+    class: Typo3OnAws\AwsDashboardWidgets\Widgets\AwsExtensionsWidget
+    arguments: ['AwsExtensions']
+    tags:
+      - name: dashboard.widget
+        identifier: AwsExtensions
+        widgetGroups: 'typo3_on_aws'

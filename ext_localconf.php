@@ -17,3 +17,18 @@
 if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
+
+call_user_func(static function () {
+    // Register extension icons
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry->registerIcon(
+        'tx-aws_dashboard_widgets-widget-icon',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:aws_dashboard_widgets/Resources/Public/Icons/Widget.svg']
+    );
+    $iconRegistry->registerIcon(
+        'tx-aws_dashboard_widgets-dashboard-icon',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:aws_dashboard_widgets/Resources/Public/Icons/Dashboard.svg']
+    );
+});
