@@ -13,61 +13,61 @@
 				<source>TYPO3 on AWS</source>
 			</trans-unit>
 
-			<trans-unit id="widgets.general_information.title" xml:space="preserve">
+			<trans-unit id="widgets.aws_general_information.title" xml:space="preserve">
 				<source>General Information</source>
 			</trans-unit>
-			<trans-unit id="widgets.general_information.description" xml:space="preserve">
+			<trans-unit id="widgets.aws_general_information.description" xml:space="preserve">
 				<source>Banner widget with general information about TYPO3-on-AWS.</source>
 			</trans-unit>
-			<trans-unit id="widgets.general_information.banner.headline" xml:space="preserve">
+			<trans-unit id="widgets.aws_general_information.banner.headline" xml:space="preserve">
 				<source>TYPO3 CMS on Amazon Web Services (AWS)</source>
 			</trans-unit>
-			<trans-unit id="widgets.general_information.banner.claim" xml:space="preserve">
+			<trans-unit id="widgets.aws_general_information.banner.claim" xml:space="preserve">
 				<source>Enterprise content management system meets high-end cloud hosting solutions.</source>
 			</trans-unit>
 
-			<trans-unit id="widgets.aws_extensions.title" xml:space="preserve">
+			<trans-unit id="widgets.aws_extension_list.title" xml:space="preserve">
 				<source>TYPO3-on-AWS Extensions</source>
 			</trans-unit>
-			<trans-unit id="widgets.aws_extensions.description" xml:space="preserve">
+			<trans-unit id="widgets.aws_extension_list.description" xml:space="preserve">
 				<source>List of currently installed TYPO3-on-AWS extensions.</source>
 			</trans-unit>
-			<trans-unit id="widgets.aws_extensions.label" xml:space="preserve">
+			<trans-unit id="widgets.aws_extension_list.label" xml:space="preserve">
 				<source>Git repositories at GitHub</source>
 			</trans-unit>
-			<trans-unit id="widgets.aws_extensions.version" xml:space="preserve">
+			<trans-unit id="widgets.aws_extension_list.version" xml:space="preserve">
 				<source>version</source>
 			</trans-unit>
-			<trans-unit id="widgets.aws_extensions.active" xml:space="preserve">
+			<trans-unit id="widgets.aws_extension_list.active" xml:space="preserve">
 				<source>active</source>
 			</trans-unit>
-			<trans-unit id="widgets.aws_extensions.inactive" xml:space="preserve">
+			<trans-unit id="widgets.aws_extension_list.inactive" xml:space="preserve">
 				<source>inactive</source>
 			</trans-unit>
 
-			<trans-unit id="widgets.link_to_commercial_support.title" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_commercial_support.title" xml:space="preserve">
 				<source>Commercial Support</source>
 			</trans-unit>
-			<trans-unit id="widgets.link_to_commercial_support.description" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_commercial_support.description" xml:space="preserve">
 				<source>Link to commercial support plans.</source>
 			</trans-unit>
-			<trans-unit id="widgets.link_to_commercial_support.label" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_commercial_support.label" xml:space="preserve">
 				<source>t3rrific.com</source>
 			</trans-unit>
-			<trans-unit id="widgets.link_to_commercial_support.text" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_commercial_support.text" xml:space="preserve">
 				<source>We are happy to help you setting up a highly available, robust, and secure hosting infrastructure on AWS. Contact us!</source>
 			</trans-unit>
 
-			<trans-unit id="widgets.link_to_documentation.title" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_documentation.title" xml:space="preserve">
 				<source>Documentation</source>
 			</trans-unit>
-			<trans-unit id="widgets.link_to_documentation.description" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_documentation.description" xml:space="preserve">
 				<source>Link to the TYPO3-on-AWS online documentation.</source>
 			</trans-unit>
-			<trans-unit id="widgets.link_to_documentation.label" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_documentation.label" xml:space="preserve">
 				<source>Documentation</source>
 			</trans-unit>
-			<trans-unit id="widgets.link_to_documentation.text" xml:space="preserve">
+			<trans-unit id="widgets.aws_link_to_documentation.text" xml:space="preserve">
 				<source>Learn more about TYPO3-on-AWS and how to maintain, update, and customize your setup.</source>
 			</trans-unit>
 		</body>
