@@ -3,34 +3,78 @@ services:
   Typo3OnAws\AwsDashboardWidgets\:
     resource: '../Classes/*'
 
-  AwsGeneralInformation:
-    class: Typo3OnAws\AwsDashboardWidgets\Widgets\GeneralInformationWidget
-    arguments: ['AwsGeneralInformation']
-    tags:
-      - name: dashboard.widget
-        identifier: AwsGeneralInformation
-        widgetGroups: 'typo3_on_aws'
+  dashboard.buttons.awsLinkToDocumentationWidget:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_documentation.label'
+      $link: 'https://t3rrific.com/typo3-on-aws/'
+      $target: '_blank'
 
-  AwsCommercialSupport:
-    class: Typo3OnAws\AwsDashboardWidgets\Widgets\LinkToCommercialSupportWidget
-    arguments: ['AwsCommercialSupport']
-    tags:
-      - name: dashboard.widget
-        identifier: AwsCommercialSupport
-        widgetGroups: 'typo3_on_aws'
+  dashboard.buttons.awsLinkToCommcercialSupportWidget:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_commercial_support.label'
+      $link: 'https://t3rrific.com'
+      $target: '_blank'
 
-  AwsDocumentation:
-    class: Typo3OnAws\AwsDashboardWidgets\Widgets\LinkToDocumentationWidget
-    arguments: ['AwsDocumentation']
+  dashboard.widget.awsGeneralInformationWidget:
+    class: 'Typo3OnAws\AwsDashboardWidgets\Widgets\AwsGeneralInformationWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $options: []
     tags:
       - name: dashboard.widget
-        identifier: AwsDocumentation
-        widgetGroups: 'typo3_on_aws'
+        identifier: 'awsGeneralInformationWidget'
+        groupNames: 'typo3_on_aws'
+        title: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_general_information.title'
+        description: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_general_information.description'
+        width: 'medium'
+        height: 'medium'
+        iconIdentifier: 'content-widget-text'
 
-  AwsExtensions:
-    class: Typo3OnAws\AwsDashboardWidgets\Widgets\AwsExtensionsWidget
-    arguments: ['AwsExtensions']
+  dashboard.widget.awsExtensionListWidget:
+    class: 'Typo3OnAws\AwsDashboardWidgets\Widgets\AwsExtensionListWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $options: []
     tags:
       - name: dashboard.widget
-        identifier: AwsExtensions
-        widgetGroups: 'typo3_on_aws'
+        identifier: 'awsExtensionListWidget'
+        groupNames: 'typo3_on_aws'
+        title: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_extension_list.title'
+        description: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_extension_list.description'
+        width: 'medium'
+        height: 'large'
+        iconIdentifier: 'content-widget-text'
+
+  dashboard.widget.awsLinkToDocumentationWidget:
+    class: 'TYPO3\CMS\Dashboard\Widgets\CtaWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $buttonProvider: '@dashboard.buttons.awsLinkToDocumentationWidget'
+      $options:
+        text: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_documentation.text'
+    tags:
+      - name: dashboard.widget
+        identifier: 'awsLinkToDocumentationWidget'
+        groupNames: 'typo3_on_aws'
+        title: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_documentation.title'
+        description: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_documentation.description'
+        iconIdentifier: 'content-widget-text'
+        height: 'small'
+
+  dashboard.widget.awsLinkToCommcercialSupportWidget:
+    class: 'TYPO3\CMS\Dashboard\Widgets\CtaWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $buttonProvider: '@dashboard.buttons.awsLinkToCommcercialSupportWidget'
+      $options:
+        text: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_commercial_support.text'
+    tags:
+      - name: dashboard.widget
+        identifier: 'awsLinkToCommcercialSupportWidget'
+        groupNames: 'typo3_on_aws'
+        title: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_commercial_support.title'
+        description: 'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.aws_link_to_commercial_support.description'
+        iconIdentifier: 'content-widget-text'
+        height: 'small'
