@@ -16,8 +16,8 @@ namespace Typo3OnAws\AwsDashboardWidgets\Widgets;
  * @link        https://github.com/typo3-on-aws/aws_dashboard_widgets
  */
 
-use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetConfigurationInterface;
-use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetInterface;
+use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
+use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
 class AwsGeneralInformationWidget implements WidgetInterface
