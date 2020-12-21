@@ -10,9 +10,9 @@
 		}
 	],
 	"require": {
-		"php": ">=7.2.0",
-		"typo3/cms-core": "^10.3",
-		"typo3/cms-dashboard": "^10.3"
+		"php": ">=7.4.0",
+		"typo3/cms-core": "^11",
+		"typo3/cms-dashboard": "^11"
 	},
 	"replace": {
 		"aws_dashboard_widgets": "self.version",

@@ -23,7 +23,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'schams.net',
     'state' => 'beta',
     'clearCacheOnLoad' => true,
-    'version' => '10.4.0',
+    'version' => '11.0.0',
     'autoload' => [
         'psr-4' => [
             'Typo3OnAws\\AwsDashboardWidgets\\' => 'Classes'
@@ -31,8 +31,8 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.0-10.4.99',
-            'php' => '7.2.0-7.4.99'
+            'typo3' => '11.0.0-11.0.99',
+            'php' => '7.4.0-7.4.99'
         ],
         'conflicts' => [],
         'suggests' => []
