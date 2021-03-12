@@ -14,10 +14,6 @@
 		"typo3/cms-core": "^11",
 		"typo3/cms-dashboard": "^11"
 	},
-	"replace": {
-		"aws_dashboard_widgets": "self.version",
-		"typo3-ter/aws-dashboard-widgets": "self.version"
-	},
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "aws_dashboard_widgets"
