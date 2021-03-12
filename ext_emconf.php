@@ -16,7 +16,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'TYPO3-on-AWS Dashboard Widgets',
-    'description' => 'TYPO3-on-AWS widgets for the TYPO3 v10 backend dashboard',
+    'description' => 'TYPO3-on-AWS widgets for the TYPO3 backend dashboard',
     'category' => 'be',
     'author' => 'Michael Schams',
     'author_email' => 'schams.net',
