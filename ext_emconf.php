@@ -2,16 +2,13 @@
 
 /*
  * This file is part of the TYPO3 CMS Extension "TYPO3-on-AWS Dashboard Widgets"
- * Extension author: Michael Schams - https://schams.net
+ * Extension author: Michael Schams <schams.net>
+ *
+ * Project: https://t3rrific.com/typo3-on-aws/
+ * Sources: https://github.com/typo3-on-aws/aws_dashboard_widgets
  *
  * For copyright and license information, please read the LICENSE.txt
  * file distributed with this source code.
- *
- * @package     TYPO3
- * @subpackage  aws_dashboard_widgets
- * @author      Michael Schams <schams.net>
- * @link        https://t3rrific.com/typo3-on-aws/
- * @link        https://github.com/typo3-on-aws/aws_dashboard_widgets
  */
 
 $EM_CONF[$_EXTKEY] = [
@@ -23,16 +20,11 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'schams.net',
     'state' => 'beta',
     'clearCacheOnLoad' => true,
-    'version' => '11.1.0',
-    'autoload' => [
-        'psr-4' => [
-            'Typo3OnAws\\AwsDashboardWidgets\\' => 'Classes'
-        ]
-    ],
+    'version' => '12.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.0.0-11.1.99',
-            'php' => '7.4.0-7.4.99'
+            'typo3' => '12.0.0-12.99.99',
+            'php' => '8.1.0-8.1.99'
         ],
         'conflicts' => [],
         'suggests' => []
