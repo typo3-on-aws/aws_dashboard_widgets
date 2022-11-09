@@ -1,73 +1,59 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 namespace Typo3OnAws\AwsDashboardWidgets\Widgets;
 
 /*
  * This file is part of the TYPO3 CMS Extension "TYPO3-on-AWS Dashboard Widgets"
- * Extension author: Michael Schams - https://schams.net
+ * Extension author: Michael Schams <schams.net>
+ *
+ * Project: https://t3rrific.com/typo3-on-aws/
+ * Sources: https://github.com/typo3-on-aws/aws_dashboard_widgets
  *
  * For copyright and license information, please read the LICENSE.txt
  * file distributed with this source code.
- *
- * @package     TYPO3
- * @subpackage  aws_dashboard_widgets
- * @author      Michael Schams <schams.net>
- * @link        https://t3rrific.com/typo3-on-aws/
- * @link        https://github.com/typo3-on-aws/aws_dashboard_widgets
  */
 
-use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
+use TYPO3\CMS\Backend\View\BackendViewFactory;
+use TYPO3\CMS\Dashboard\Widgets\RequestAwareWidgetInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
-use TYPO3\CMS\Fluid\View\StandaloneView;
+use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Dashboard\Widgets\AdditionalCssInterface;
 
-class AwsGeneralInformationWidget implements WidgetInterface
+class AwsGeneralInformationWidget implements WidgetInterface, RequestAwareWidgetInterface, AdditionalCssInterface
 {
-    /**
-     * @var WidgetConfigurationInterface
-     */
-    private $configuration;
+    protected ServerRequestInterface $request;
 
-    /**
-     * @var StandaloneView
-     */
-    private $view;
-
-    /**
-     * @var array
-     */
-    private $options;
-
-    /**
-     * @var string
-     */
-    private $extensionKey = 'aws_dashboard_widgets';
-
-    /**
-     * @var string
-     */
-    private $templateName = 'AwsGeneralInformationWidget';
-
-    /**
-     * Constructor
-     */
-    public function __construct(
-        WidgetConfigurationInterface $configuration,
-        StandaloneView $view,
-        array $options = []
+	public function __construct(
+        protected readonly WidgetConfigurationInterface $configuration,
+        protected readonly BackendViewFactory $backendViewFactory,
+        protected readonly array $options = []
     ) {
-        $this->configuration = $configuration;
-        $this->view = $view;
-        $this->options = $options;
     }
 
-    /**
-     * Render widget content by using custom templates
-     */
     public function renderWidgetContent(): string
     {
-        $this->view->setTemplate('Widget/' . $this->templateName);
-        $this->view->getRenderingContext()->getTemplatePaths()->fillDefaultsByPackageName($this->extensionKey);
-        $this->view->assign('configuration', $this->configuration);
-        return $this->view->render();
+        $view = $this->backendViewFactory->create($this->request, ['typo3-on-aws/aws-dashboard-widgets']);
+		$view->assignMultiple([
+            'options' => $this->options
+        ]);
+		return $view->render('Widget/AwsGeneralInformationWidget');
     }
+
+	public function setRequest(ServerRequestInterface $request): void
+    {
+        $this->request = $request;
+    }
+
+    public function getOptions(): array
+    {
+        return $this->options;
+    }
+
+	public function getCssFiles(): array
+	{
+	   return [
+		   'EXT:aws_dashboard_widgets/Resources/Public/Css/AwsGeneralInformationWidget.css'
+	   ];
+	}
 }
