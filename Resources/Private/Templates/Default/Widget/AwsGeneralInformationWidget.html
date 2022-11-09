@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Widget/Default" />
+
+<f:section name="main">
+    <div class="AwsDashboardWidgets">
+        <div class="AwsGeneralInformationWidget">
+            <div class="t3rrific-logo">
+				<f:link.typolink parameter="https://t3rrific.com/typo3-on-aws/" target="_blank" class="">
+	                <f:image src="EXT:aws_dashboard_widgets/Resources/Public/Images/t3rrific.png" alt="t3rrific.com" class="" />
+				</f:link.typolink>
+            </div>
+            <div class="banner text-center">
+                <div class="logos">
+                    <img class="typo3" src="{f:uri.resource(path: 'Images/typo3_logo.svg', extensionName: 'AwsDashboardWidgets')}" height="60" alt="{f:translate(key:'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:typo3_logo')}" />
+                    <span class="plus">+</span>
+                    <img class="aws" src="{f:uri.resource(path: 'Images/aws_logo.svg', extensionName: 'AwsDashboardWidgets')}" height="50" alt="{f:translate(key:'LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:aws_logo')}" />
+                </div>
+                <h1>
+                    <f:translate key="LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.AwsGeneralInformationWidget.banner.headline" />
+                </h1>
+                <p>
+                    <strong>
+						<f:translate key="LLL:EXT:aws_dashboard_widgets/Resources/Private/Language/locallang.xlf:widgets.AwsGeneralInformationWidget.banner.claim" />
+					</strong>
+				</p>
+				<p>
+                    <f:link.typolink parameter="https://t3rrific.com/typo3-on-aws/" target="_blank" class="btn btn-sm btn-secondary mt-2 px-4">
+                        <strong>t3rrific.com</strong>
+                    </f:link.typolink>
+                </p>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+</html>
