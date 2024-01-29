@@ -13,7 +13,7 @@ TYPO3-on-AWS dashboard widgets for the TYPO3 backend.
 
 ## License
 
-(c) 2020-2022 Michael Schams ([schams.net](https://schams.net)), all rights reserved
+(c) 2020-2024 Michael Schams ([schams.net](https://schams.net)), all rights reserved
 
 This software is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, either version 3 of the License, or any later version.
 
